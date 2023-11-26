@@ -1,10 +1,9 @@
 # Such A Disaster!!
 
-Twitter has become an important communication channel in times of emergency.
-The ubiquitousness of smartphones enables people to announce an emergency they’re observing in real-time. Because of this, more agencies are interested in programatically monitoring Twitter (i.e. disaster relief organizations and news agencies).
+Twitter has emerged as a crucial communication channel during emergencies, allowing real-time reporting of incidents through smartphones. As a result, various organizations, including disaster relief agencies and news outlets, are keen on programmatically monitoring Twitter for timely response and accurate information dissemination.
 
-But, it’s not always clear whether a person’s words are actually announcing a disaster.
-The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.
+### The Challenge: 
+Despite the valuable information shared on Twitter, interpreting whether a tweet genuinely indicates a disaster is a complex task. Words like "ABLAZE" might be used metaphorically, leading to potential misinterpretation by automated systems.
 
 > [!NOTE]
 > **Disclaimer:** The dataset for this competition contains text that may be considered profane, vulgar, or offensive.
