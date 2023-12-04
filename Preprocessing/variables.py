@@ -1,0 +1,78 @@
+replace_collocations = {
+    "aren't": "are not",
+    "can't": "cannot",
+    "didn't": "did not",
+    "doesn't": "does not",
+    "don't": "do not",
+    "hadn't": "had not",
+    "hasn't": "has not",
+    "haven't": "have not",
+    "he'd": "he would",
+    "he'll": "he will",
+    "he's": "he is",
+    "here's": "here is",
+    "isn't": "is not",
+    "it's": "it is",
+    "i'm": "i am",
+    "i've": "i have",
+    "it'll": "it will",
+    "it'd": "it would",
+    "i'd": "i would",
+    "i'll": "i will",
+    "mightn't": "might not",
+    "mustn't": "must not",
+    "she'd": "she would",
+    "she'll": "she will",
+    "she's": "she is",
+    "shouldn't": "should not",
+    "they'd": "they would",
+    "they'll": "they will",
+    "they're": "they are",
+    "there's": "there has",
+    "wasn't": "was not",
+    "we'd": "we would",
+    "we'll": "we will",
+    "we're": "we are",
+    "weren't": "were not",
+    "won't": "will not",
+    "wouldn't": "would not",
+    "what's": "what is",
+    "you're": "you are",
+    "you'll": "you will",
+    "you'd": "you would",
+}
+
+replace_collocations_with_errors={}
+for word, changed_word in replace_collocations.items():
+    replace_collocations_with_errors[word.replace("'","")]=changed_word
+
+print(replace_collocations_with_errors)
+
+replace_abbreviations = {
+    "ave": "avenue",
+    "hwy": "highway",
+    "intl": "international",
+    "st": "saint",
+    "stats": "statistics",
+    "pkwy": "parkway",
+    "av": "autonomous vehicle",
+    "conf": "confirm",
+    "rd": "road",
+    "dr": "doctor",
+    "wtf": "what the fuck",
+    "mf": "motherfucker",
+    "omg": "oh my god",
+    "rip": "rest in peace",
+    "esp": "especially",
+    "ok": "okay",
+    "ny": "new york",
+    "bc": "because",
+    "bcz": "because",
+    "sr": "senior",
+    "vs": "versus",
+}
+
+replace_word_symbols = {
+    "&amp": "&",
+    "&gt": ">",
+}
