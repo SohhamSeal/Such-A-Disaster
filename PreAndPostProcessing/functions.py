@@ -89,6 +89,9 @@ def preprocess(df, is_train):
   Preprocess the data, for both train and test data, as and when accordingly sent
   Display train wordclouds only, not for test
   '''
+  if is_train == True:
+    plot_count(df,['target'],'Train')
+  
   #dropping some unnecessary columns
   dropped_df=df.drop(['id','keyword','location'],axis=1)
   dropped_df
@@ -127,9 +130,6 @@ def preprocess(df, is_train):
   # data_padding = pad_sequences(data_sequance, maxlen=150, padding="pre", truncating="pre")
 
   
-  
-  
-
 
 def take_data():
   '''
@@ -139,8 +139,8 @@ def take_data():
   test_df=pd.read_csv('..\Data\test.csv')
   #sub_df=pd.read_csv('..\Data\sample_submission.csv')
   
-  train_df
-  plot_count(train_df,['target'],'Train')
+  train_df=preprocess(train_df,True)
+  test_df=preprocess(test_df,False)
   
   
   
