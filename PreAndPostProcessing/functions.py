@@ -74,10 +74,59 @@ def plot_count(df: pd.core.frame.DataFrame, col_list: list, title_name: str='Tra
   plt.show()
 
 
-def preprocess(df):
+def transform_text(text):
+  '''
+  ............................
+  '''
+  new_text = " ".join([Lemmatize.lemmatize(word) for word in word_tokenize(text) if ((word not in punc) and (word not in stop_word))])
+
+  return new_text
+
+
+
+def preprocess(df, is_train):
   '''
   Preprocess the data, for both train and test data, as and when accordingly sent
+  Display train wordclouds only, not for test
   '''
+  #dropping some unnecessary columns
+  dropped_df=df.drop(['id','keyword','location'],axis=1)
+  dropped_df
+  
+  if is_train == True:
+    generate_word_cloud(dropped_df['text'],'..\Images','WordCloud before cleaning')
+  
+  #apply changes
+  changed_df=dropped_df
+  changed_df['text']=dropped_df['text'].apply(cleaner_func)
+  
+  if is_train == True:
+    generate_word_cloud(changed_df['text'],'..\Images','WordCloud after cleaning')
+    
+  # #apply lemmatization and stopword removal
+  # punc = list(string.punctuation)
+  # stop_word = stopwords.words("english")
+  # Lemmatize = WordNetLemmatizer()
+  
+  # lemme_df=changed_df
+  # lemme_df['text']=changed_df['text'].apply(transform_text)
+  # lemme_df['text']
+  
+  # if is_train == True:
+  #   generate_word_cloud(lemme_df['text'],'..\Images','WordCloud after lemmatization and stopword removal')
+  
+  # # Tokenization
+  # X=lemme_df['text']
+  # tokenize = Tokenizer(oov_token="<OOV>")
+  # tokenize.fit_on_texts(X)
+  # word_index = tokenize.word_index
+
+  # data_sequance = tokenize.texts_to_sequences(X)
+
+  # # Padding_Sequences
+  # data_padding = pad_sequences(data_sequance, maxlen=150, padding="pre", truncating="pre")
+
+  
   
   
 
@@ -93,14 +142,12 @@ def take_data():
   train_df
   plot_count(train_df,['target'],'Train')
   
-  train_df
-  
-  #dropping some columns
-  dropped_train_df=train_df.drop(['id','keyword','location'],axis=1)
-  dropped_train_df
   
   
   
+  
+    
+
 
 
 
