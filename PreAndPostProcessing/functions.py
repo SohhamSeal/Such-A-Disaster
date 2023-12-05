@@ -1,4 +1,4 @@
-def plot_count(df: pd.core.frame.DataFrame, col_list: list, title_name: str='Train', path) -> None:
+def plot_count(df: pd.core.frame.DataFrame, col_list: list, title_name: str='Train') -> None:
   '''
   Display the distribution of target value in the dataset provided
   in :
@@ -70,7 +70,7 @@ def plot_count(df: pd.core.frame.DataFrame, col_list: list, title_name: str='Tra
 
   # Adjusting the spacing between the plots
   plt.tight_layout()
-  plt.savefig(path, bbox_inches='tight', pad_inches=0)
+  plt.savefig(f'..\Images\{title_name}', bbox_inches='tight', pad_inches=0)
   plt.show()
 
 
