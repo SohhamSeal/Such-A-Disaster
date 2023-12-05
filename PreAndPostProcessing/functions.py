@@ -86,9 +86,9 @@ def take_data():
   '''
   Load data from the source data folder and do the necessary work
   '''
-  train_df=pd.read_csv('/content/drive/MyDrive/Disaster Tweet Classification/train.csv')
-  test_df=pd.read_csv('/content/drive/MyDrive/Disaster Tweet Classification/test.csv')
-  #sub_df=pd.read_csv('/content/drive/MyDrive/Disaster Tweet Classification/sample_submission.csv')
+  train_df=pd.read_csv('..\Data\train.csv')
+  test_df=pd.read_csv('..\Data\test.csv')
+  #sub_df=pd.read_csv('..\Data\sample_submission.csv')
   
   train_df
   plot_count(train_df,['target'],'Train')
