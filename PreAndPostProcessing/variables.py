@@ -46,8 +46,6 @@ replace_collocations_with_errors={}
 for word, changed_word in replace_collocations.items():
     replace_collocations_with_errors[word.replace("'","")]=changed_word
 
-print(replace_collocations_with_errors)
-
 replace_abbreviations = {
     "ave": "avenue",
     "hwy": "highway",
@@ -70,9 +68,33 @@ replace_abbreviations = {
     "bcz": "because",
     "sr": "senior",
     "vs": "versus",
+    "wht": "what",
+    "us'g": "using",
+    "s3x": "sex",
+    "rn": "right now",
+
 }
 
 replace_word_symbols = {
     "&amp": "&",
     "&gt": ">",
+    "ÛÒ": "",
+    "åÊ": "",
+    "Û÷": "",
+    "ÛÓ": "",
+    "Û_": "",
+    "Û": "",
+    "å£": "",
+    "å": "",
+    "á": "",
+    "å": "",
+    "á": "",
+    "å": "",
+    "á": "",
+    "Ì": "",
+    "¢": "",
+    "Û¼": "",
+    "&lt": "<",
+    "ÛÏ": "",
+    "Û": "",
 }
